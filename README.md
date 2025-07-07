@@ -1,36 +1,16 @@
-# 🎯 Unified Evaluation Tool
+# EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models
 
-A unified evaluation script supporting three NLP and multimodal evaluation tasks:
+🚀 **New!** Our paper **"EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models"** 🎉  
+This repository contains the official evaluation code and data for our work.
 
-1. **Classification** — Compute accuracy, precision, recall, F1 from JSON files.
-2. **Joint Evaluation** — Evaluate *emotion* and *intent* jointly from a JSONL file.
-3. **Generation Evaluation** — Compute BLEU-4, ROUGE-L, and BERTScore from generated text.
 
----
+📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2503.14939v1) | [arXiv Page](https://arxiv.org/abs/2503.14939v1)
 
-## 📦 Features
-
-- 🧠 Label classification evaluation (e.g., emotion/sentiment).
-- 🧩 Joint label evaluation (e.g., emotion + intent).
-- 📝 Text generation evaluation using BLEU, ROUGE, and BERTScore.
-- 📤 Invalid sample detection and optional export.
-- 📊 JSON and CSV result outputs for easy analysis and plotting.
+🌐 [**Project Homepage**](https://emo-gml.github.io/)  
+📊 [**Dataset**](https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view)
 
 ---
 
-## 🛠️ Installation
-
-### Python Dependencies
-
-Install required Python packages:
-
-```bash
-pip install scikit-learn nltk rouge-score bert-score pandas
-
-## 🚀 Usage
-```bash
-python eval.py [classification | joint | generation] <arguments>
-
-#EmoBench-M
-#谷歌云盘链接
-https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view
+## Introduction
+<b>EmoBench-M<b> is the first benchmark to integrate video, audio, and text for multimodal emotion understanding. Grounded in the theory of emotional intelligence, it focuses on three core competencies: basic emotion recognition, conversational emotion understanding, and social complex emotion analysis. It features 13 real-world evaluation scenarios, including music emotion recognition, stock review emotion analysis, multi-party conversation emotion recognition, and humor/sarcasm detection. By simulating the complex and dynamic emotional expressions found in human-human and human-machine interactions, it fills the gap left by existing single-modality or static emotion recognition datasets.
+![Alt text](images/intro.pdf)
