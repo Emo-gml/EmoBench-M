@@ -200,6 +200,32 @@ def main():
 if __name__ == '__main__':
     main()
 
+# === Example file structure & running example ===
+# 1. Classification JSON (results.json):
+# [
+# {"video":"a.mp4","expected_value":"positive","predicted_value":"neutral"},
+# {"video":"b.mp4","expected_value":"negative","predicted_value":"negative"}
+# ]
+# Run:
+# python eval.py classification --json results.json --categories positive negative neutral \
+# --output class_metrics.json --invalid invalid_samples.json
+
+# 2. Joint JSONL (emotions.jsonl):
+# {"modal_path":"/p/a.mp4","expected_emotion":"happy","expected_intent":"encouraging","predicted_emotion":"happy","predicted_intent":"encouraging"}
+# {"modal_path":"/p/b.mp4","expected_emotion":"sad","expected_intent":"questioning","predicted_emotion":"sad","predicted_intent":"neutral"}
+# Run:
+# python eval.py joint --jsonl emotions.jsonl --emotion-cats happy sad neutral \
+# --intent-cats questioning agreeing acknowledging \(\emotion_categories = ["happy", "surprise", "sad", "disgust", "anger", "fear", "neutral"]\)
+# --output joint_metrics.json
+
+# 3. Generation JSON (gen.json):
+# [
+# {"video":"a.mp4","prediction":"I am happy","reference":"I feel happy"},
+# {"video":"b.mp4","prediction":"He looks sad","reference":"He seems sad"}
+# ]
+# Run:
+# python eval.py generation --json gen.json --output gen_metrics.json
+
 # === Example config.json ===
 # Save the following as config.json to centrally manage dataset and MC-EIU settings:
 # {
