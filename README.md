@@ -4,7 +4,7 @@
 This repository contains the official evaluation code and data for our work.
 
 
-📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2503.14939v1) | [arXiv Page](https://arxiv.org/abs/2503.14939v1)
+📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2502.04424) | [arXiv Page](https://arxiv.org/abs/2502.04424)
 
 🌐 [**Project Homepage**](https://emo-gml.github.io/)  
 📊 [**Dataset**](https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view)
