@@ -27,6 +27,9 @@ Install required Python packages:
 ```bash
 pip install scikit-learn nltk rouge-score bert-score pandas
 
+## 🚀 Usage
+```bash
+python eval.py [classification | joint | generation] <arguments>
 
 #EmoBench-M
 #谷歌云盘链接
