@@ -8,7 +8,7 @@ eval.py: Unified evaluation script supporting three modes:
 Usage examples:
   python eval.py classification --json results1.json results2.json \
       --categories positive negative neutral \
-      --output class_metrics.json --invalid invalid_samples.json
+      --output class_metrics.json
 
   python eval.py joint --jsonl emotions_intents.jsonl \
       --emotion-cats happy sad neutral \
@@ -30,7 +30,7 @@ from bert_score import score as bert_score
 import pandas as pd
 
 
-def evaluate_classification(json_paths: List[str], categories: List[str], output_metrics: str, output_invalid: str = None) -> None:
+def evaluate_classification(json_paths: List[str], categories: List[str], output_metrics: str) -> None:
     """
     Evaluate classification performance (accuracy, precision, recall, F1) on one or more JSON files.
 
@@ -41,10 +41,8 @@ def evaluate_classification(json_paths: List[str], categories: List[str], output
     :param json_paths: List of input JSON file paths
     :param categories: Supported label categories
     :param output_metrics: Path to save the resulting metrics JSON
-    :param output_invalid: Path to save invalid samples (optional)
     """
     targets, preds = [], []
-    invalid_samples = []
     for path in json_paths:
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -54,17 +52,6 @@ def evaluate_classification(json_paths: List[str], categories: List[str], output
             if exp in categories and pre in categories:
                 targets.append(exp)
                 preds.append(pre)
-            else:
-                invalid_samples.append({
-                    'file': path,
-                    'sample': sample,
-                    'error': 'invalid label',
-                    'time': datetime.datetime.utcnow().isoformat() + 'Z'
-                })
-    if invalid_samples and output_invalid:
-        with open(output_invalid, 'w', encoding='utf-8') as f:
-            json.dump(invalid_samples, f, ensure_ascii=False, indent=2)
-        print(f"Invalid samples written to: {output_invalid}")
     if targets:
         metrics = {
             'accuracy': accuracy_score(targets, preds),
@@ -177,7 +164,6 @@ def main():
     pc.add_argument('--json', nargs='+', required=True, help='Paths to JSON files for classification')
     pc.add_argument('--categories', nargs='+', required=True, help='List of valid label categories')
     pc.add_argument('--output', required=True, help='Output JSON file for classification metrics')
-    pc.add_argument('--invalid', default=None, help='Output JSON file for invalid samples')
     # joint subcommand
     pj = sub.add_parser('joint')
     pj.add_argument('--jsonl', required=True, help='Path to JSONL file for joint evaluation')
@@ -191,11 +177,12 @@ def main():
 
     args = parser.parse_args()
     if args.mode == 'classification':
-        evaluate_classification(args.json, args.categories, args.output, args.invalid)
+        evaluate_classification(args.json, args.categories, args.output)
     elif args.mode == 'joint':
         evaluate_joint(args.jsonl, args.emotion_cats, args.intent_cats, args.output)
     elif args.mode == 'generation':
         evaluate_generation(args.json, args.output)
+
 
 if __name__ == '__main__':
     main()
