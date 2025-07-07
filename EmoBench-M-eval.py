@@ -213,8 +213,8 @@ if __name__ == '__main__':
 # Run:
 # python eval.py generation --json gen.json --output gen_metrics.json
 
-# === Example config.json ===
-# Save the following as config.json to centrally manage dataset and MC-EIU settings:
+# === Example categories ===
+# Save the following as categories to centrally manage dataset and MC-EIU settings:
 # {
 #   "datasets": [
 #     {"name": "FGMSA",       "categories": ["weak negative","strong negative","neutral","strong positive","weak positive"]},
@@ -234,8 +234,3 @@ if __name__ == '__main__':
 #     "intent_categories":  ["questioning","agreeing","acknowledging","encouraging","consoling","suggesting","wishing","neutral"]
 #   }
 # }
-#
-# Explanation:
-# - Use "datasets" entries to supply --categories for classification. 
-# - Use "MC-EIU" emotion_categories and intent_categories for joint evaluation (--emotion-cats, --intent-cats). 
-# - Central config reduces manual list entry when running commands.
