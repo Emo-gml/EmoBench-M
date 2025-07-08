@@ -59,6 +59,90 @@ Each JSON file contains conversation-style prompts and labels aligned with the c
   }
 ]
 ```
+## 🧪 Evaluation Usage
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 1. Classification
+
+```bash
+python eval.py classification --json results.json --output classification.json
+```
+
+Format:
+```json
+[
+  {"video": "sample1.mp4", "expected_value": "positive", "predicted_value": "positive"},
+  {"video": "sample2.mp4", "expected_value": "neutral", "predicted_value": "negative"}
+]
+```
+
+---
+
+### 2. Joint Emotion + Intent
+
+```bash
+python eval.py joint --json emotions.json --output joint.json
+```
+
+Format:
+```json
+[
+  {
+    "modal_path": "sample1.mp4",
+    "expected_emotion": "happy",
+    "predicted_emotion": "happy",
+    "expected_intent": "encouraging",
+    "predicted_intent": "encouraging"
+  }
+]
+```
+
+---
+
+### 3. Generation
+
+```bash
+python eval.py generation --json gen.json --output generation.json
+```
+
+Format:
+```json
+[
+  {"video": "sample1.mp4", "prediction": "I am very happy", "reference": "I feel happy"}
+]
+```
+
+---
+
+### 4. Run All in One
+
+```bash
+python eval.py all \
+  --classification-json results.json \
+  --joint-json emotions.json \
+  --generation-json gen.json \
+  --output-dir results/
+```
+
+Output:
+- `results/classification.json`
+- `results/joint.json`
+- `results/generation.json`
+
+---
+
+## 📁 Provided Files
+
+- `eval.py` — evaluation script (supports all modes)
+- `requirements.txt` — required Python packages
+- `results.json` — classification sample
+- `emotions.json` — joint sample
+- `gen.json` — generation sample
 
 
 ## 📜 Citation
