@@ -44,8 +44,4 @@ This repository contains the official evaluation code and data for the paper "**
   journal={arXiv preprint arXiv:2502.04424},
   year={2025}
   }
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> origin/main
