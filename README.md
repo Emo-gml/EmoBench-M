@@ -1,7 +1,13 @@
 # EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models
 
-🚀 **New!** Our paper **"EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models"** 🎉  
-This repository contains the official evaluation code and data for our work.
+
+## 📢 Update: 2025.07.08
+
+🎉🎉🎉 The **EmoBench-M** benchmark for multimodal emotion understanding is now available on **Google Drive**!
+
+📎 [Click to access the Google Drive link](https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view) <!-- Replace with actual link -->
+
+Feel free to explore, evaluate, and build upon it! 🤗
 
 
 📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2502.04424) | [arXiv Page](https://arxiv.org/abs/2502.04424)
