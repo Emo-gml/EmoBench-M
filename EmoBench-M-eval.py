@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
 """
-eval.py: Unified evaluation script supporting four modes:
-  1. classification — compute accuracy, precision, recall, F1 across JSON files
-  2. joint — evaluate emotion and intent together from a JSONL file
-  3. generation — compute BLEU-4, ROUGE-L, and BERTScore for generated text
-  4. all — run all three evaluations in one command
+eval.py: Unified evaluation script for emotion benchmarks.
+Supports four evaluation modes, all using JSON format for input and output:
 
-Usage examples:
-  python eval.py classification --json results1.json results2.json --output class_metrics.json
-  python eval.py joint --jsonl emotions.jsonl --output joint_metrics.json
-  python eval.py generation --json gen.json --output gen_metrics.json
+1. classification — standard label classification (accuracy, precision, recall, F1)
+2. joint — joint evaluation of emotion and intent labels
+3. generation — evaluates generated text against references (BLEU, ROUGE, BERTScore)
+4. all — run all three evaluations in one command
 
-  # All-in-one evaluation
-  python eval.py all \\
-    --classification-json results1.json results2.json \\
-    --joint-jsonl emotions.jsonl \\
-    --generation-json gen.json \\
-    --output-dir results/
+Usage:
+
+# Classification only
+python eval.py classification --json results1.json results2.json --output classification.json
+
+# Joint evaluation only
+python eval.py joint --json emotions.json --output joint.json
+
+# Generation evaluation only
+python eval.py generation --json gen.json --output generation.json
+
+# Run all evaluations in one go
+python eval.py all \\
+  --classification-json results1.json results2.json \\
+  --joint-json emotions.json \\
+  --generation-json gen.json \\
+  --output-dir results/
 """
 
 import os
@@ -28,6 +36,9 @@ from nltk.translate.bleu_score import sentence_bleu
 from rouge_score import rouge_scorer
 from bert_score import score as bert_score
 
+# ------------------------
+# Classification Evaluation
+# ------------------------
 def evaluate_classification(json_paths: List[str], output_metrics: str) -> None:
     targets, preds = [], []
     for path in json_paths:
@@ -52,23 +63,23 @@ def evaluate_classification(json_paths: List[str], output_metrics: str) -> None:
     else:
         print("[classification] No valid samples.")
 
-def evaluate_joint(jsonl_path: str, output_metrics: str) -> None:
+# ------------------------
+# Joint Emotion + Intent Evaluation
+# ------------------------
+def evaluate_joint(json_path: str, output_metrics: str) -> None:
     true_e, pred_e, true_i, pred_i = [], [], [], []
-    with open(jsonl_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            try:
-                s = json.loads(line)
-                te = s.get('expected_emotion', '').strip().lower()
-                pe = s.get('predicted_emotion', '').strip().lower()
-                ti = s.get('expected_intent', '').strip().lower()
-                pi = s.get('predicted_intent', '').strip().lower()
-                if te and pe and ti and pi:
-                    true_e.append(te)
-                    pred_e.append(pe)
-                    true_i.append(ti)
-                    pred_i.append(pi)
-            except json.JSONDecodeError:
-                continue
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    for s in data:
+        te = s.get('expected_emotion', '').strip().lower()
+        pe = s.get('predicted_emotion', '').strip().lower()
+        ti = s.get('expected_intent', '').strip().lower()
+        pi = s.get('predicted_intent', '').strip().lower()
+        if te and pe and ti and pi:
+            true_e.append(te)
+            pred_e.append(pe)
+            true_i.append(ti)
+            pred_i.append(pi)
     joint_true = [f"{e}_{i}" for e, i in zip(true_e, true_i)]
     joint_pred = [f"{e}_{i}" for e, i in zip(pred_e, pred_i)]
     if joint_true:
@@ -85,6 +96,9 @@ def evaluate_joint(jsonl_path: str, output_metrics: str) -> None:
     else:
         print("[joint] No valid samples.")
 
+# ------------------------
+# Generation Evaluation
+# ------------------------
 def evaluate_generation(json_file: str, output_metrics: str) -> None:
     data = json.load(open(json_file, 'r', encoding='utf-8'))
     scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
@@ -111,25 +125,30 @@ def evaluate_generation(json_file: str, output_metrics: str) -> None:
         json.dump(metrics, f, ensure_ascii=False, indent=2)
     print(f"[generation] Metrics saved to: {output_metrics}")
 
+# ------------------------
+# Main Entry + All-in-one
+# ------------------------
 def main():
-    parser = argparse.ArgumentParser(description='Unified evaluation')
+    parser = argparse.ArgumentParser(description='Unified benchmark evaluation (JSON only)')
     sub = parser.add_subparsers(dest='mode', required=True)
 
+    # Individual modes
     pc = sub.add_parser('classification')
     pc.add_argument('--json', nargs='+', required=True)
     pc.add_argument('--output', required=True)
 
     pj = sub.add_parser('joint')
-    pj.add_argument('--jsonl', required=True)
+    pj.add_argument('--json', required=True)
     pj.add_argument('--output', required=True)
 
     pg = sub.add_parser('generation')
     pg.add_argument('--json', required=True)
     pg.add_argument('--output', required=True)
 
+    # All-in-one
     pa = sub.add_parser('all')
     pa.add_argument('--classification-json', nargs='+')
-    pa.add_argument('--joint-jsonl')
+    pa.add_argument('--joint-json')
     pa.add_argument('--generation-json')
     pa.add_argument('--output-dir', required=True)
 
@@ -137,20 +156,21 @@ def main():
     if args.mode == 'classification':
         evaluate_classification(args.json, args.output)
     elif args.mode == 'joint':
-        evaluate_joint(args.jsonl, args.output)
+        evaluate_joint(args.json, args.output)
     elif args.mode == 'generation':
         evaluate_generation(args.json, args.output)
     elif args.mode == 'all':
         os.makedirs(args.output_dir, exist_ok=True)
         if args.classification_json:
             evaluate_classification(args.classification_json, os.path.join(args.output_dir, 'classification.json'))
-        if args.joint_jsonl:
-            evaluate_joint(args.joint_jsonl, os.path.join(args.output_dir, 'joint.json'))
+        if args.joint_json:
+            evaluate_joint(args.joint_json, os.path.join(args.output_dir, 'joint.json'))
         if args.generation_json:
             evaluate_generation(args.generation_json, os.path.join(args.output_dir, 'generation.json'))
 
 if __name__ == '__main__':
     main()
+
 
 
 # === Example file structure & running example ===
