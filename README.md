@@ -37,8 +37,7 @@ This repository contains the official evaluation code and data for the paper "**
 
 To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
 
-🔗 **[Download Videos & JSONs](YOUR_LINK_HERE)**  
-*(Replace `YOUR_LINK_HERE` with your actual data hosting link)*
+🔗 **[Download Videos & JSONs](https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view)**  
 
 Each JSON file contains conversation-style prompts and labels aligned with the corresponding video clips. The structure looks like:
 
