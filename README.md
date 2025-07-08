@@ -33,7 +33,33 @@ This repository contains the official evaluation code and data for the paper "**
 
 
 ## 🔥 Quick Start
+## 📥 Download Data
 
+To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
+
+🔗 **[Download Videos & JSONs](YOUR_LINK_HERE)**  
+*(Replace `YOUR_LINK_HERE` with your actual data hosting link)*
+
+Each JSON file contains conversation-style prompts and labels aligned with the corresponding video clips. The structure looks like:
+
+```json
+[
+  {
+    "id": "0",
+    "video": "videos/ch-simsv2s/aqgy4_0004/00023.mp4",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<video>\nThe person in video says: ... Determine the emotion conveyed..."
+      },
+      {
+        "from": "gpt",
+        "value": "negative"
+      }
+    ]
+  }
+]
+```
 
 
 ## 📜 Citation
