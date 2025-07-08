@@ -1,0 +1,12 @@
+[
+  {
+    "video": "sample1.mp4",
+    "prediction": "I am very happy",
+    "reference": "I feel happy"
+  },
+  {
+    "video": "sample2.mp4",
+    "prediction": "He looks sad",
+    "reference": "He seems sad"
+  }
+]
