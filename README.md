@@ -32,94 +32,186 @@ This repository contains the official evaluation code and data for the paper "**
 - **[2025-02-05]** Created the official project website: https://emo-gml.github.io/.
 
 
-## 🔥 Quick Start
-## 📥 Download Data
 
+## 📥 Dataset
 To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
 
-🔗 **[Download Videos & JSONs](https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view)**  
+<a href="https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view"><img src="https://img.shields.io/badge/Dataset-Open-green.svg" alt="Dataset Open"/></a>
 
 Each JSON file contains conversation-style prompts and labels aligned with the corresponding video clips. The structure looks like:
 
-```json
-[
-  {
-    "id": "0",
-    "video": "videos/ch-simsv2s/aqgy4_0004/00023.mp4",
-    "conversations": [
-      {
-        "from": "human",
-        "value": "<video>\nThe person in video says: ... Determine the emotion conveyed..."
-      },
-      {
-        "from": "gpt",
-        "value": "negative"
-      }
-    ]
-  }
-]
-```
-## 🧪 Evaluation Usage
+  ```json
+  [
+    {
+      "id": "0",
+      "video": "videos/ch-simsv2s/aqgy4_0004/00023.mp4",
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<video>\nThe person in video says: ... Determine the emotion conveyed..."
+        },
+        {
+          "from": "gpt",
+          "value": "negative"
+        }
+      ]
+    }
+  ]
+  ```
+  ### 📁 Dataset Structure
+  ```bash
+  EmoBench-M/
+  ├── benchmark_json/           # JSON files containing metadata and annotations for each dataset
+  │   ├── FGMSA_test_instruction.json    # Test instructions for the FGMSA dataset
+  │   ├── MC-EIU-test_500.json           # 500-sample test set for the MC-EIU dataset
+  │   ├── MELD_test_instruction.json     # Test instructions for the MELD dataset
+  │   ├── MOSEI_test_500.json            # 500-sample test set for the MOSEI dataset
+  │   ├── MOSI_test_500.json             # 500-sample test set for the MOSI dataset
+  │   ├── MUSTARD_500.json               # 500-sample test set for the MUSTARD dataset
+  │   ├── RAVDSS_song_500.json           # 500-sample test set for the RAVDSS song subset
+  │   ├── RAVDSS_speech_500.json         # 500-sample test set for the RAVDSS speech subset
+  │   ├── SIMS_test_500.json             # 500-sample test set for the SIMS dataset
+  │   ├── ch-simsv2s_test_500.json       # 500-sample test set for the Chinese SIMS v2s dataset
+  │   ├── funny_test_instruction.json    # Test instructions for the UR-FUNNY dataset
+  │   ├── mer2023_test1_instruction.json # Test instructions for the MER2023 dataset
+  │   └── smile_test_data.json           # Test data for the SMILE dataset
+  └── dataset_500/              # Corresponding video files for each dataset
+      ├── FGMSA_test_instruction/
+      │   └── videos/
+      │       └── FGMSA/        # Video files for the FGMSA dataset
+      ├── MC-EIU-test_500/
+      │   └── videos/
+      │       └── MC-EIU/       # Video files for the MC-EIU dataset
+      ├── MELD_test_instruction/
+      │   └── videos/
+      │       └── MELD/         # Video files for the MELD dataset
+      ├── MOSEI_test_500/
+      │   └── videos/
+      │       └── MOSEI/        # Video files for the MOSEI dataset
+      ├── MOSI_test_500/
+      │   └── videos/
+      │       └── MOSI/         # Video files for the MOSI dataset
+      ├── MUSTARD_500/
+      │   └── videos/
+      │       └── MUSTARD/      # Video files for the MUSTARD dataset
+      ├── RAVDSS_song_500/
+      │   └── videos/
+      │       └── RAVDSS/       # Video files for the RAVDSS song subset
+      ├── RAVDSS_speech_500/
+      │   └── videos/
+      │       └── RAVDSS/       # Video files for the RAVDSS speech subset
+      ├── SIMS_test_500/
+      │   └── videos/
+      │       └── SIMS/         # Video files for the SIMS dataset
+      ├── ch-simsv2s_test_500/
+      │   └── videos/
+      │       └── ch-simsv2s/   # Video files for the Chinese SIMS v2s dataset
+      ├── funny_test_instruction/
+      │   └── videos/
+      │       └── UR-FUNNY/     # Video files for the UR-FUNNY dataset
+      ├── mer2023_test1_instruction/
+      │   └── videos/
+      │       └── MER2023/      # Video files for the MER2023 dataset
+      └── smile_test_data/
+          └── videos/
+              └── SMILE/       # Video files for the SMILE dataset
+  ```
+  📂 Dtat Structure Overview
+  - benchmark_json/: Contains JSON files with metadata and annotations for each dataset, including test instructions and sample information.
+  - dataset_500/: Corresponding video files for each dataset, organized into subdirectories named after each dataset.
 
-### Install Dependencies
+## 🔥 Quick Start
+EmoBench-M encompasses three primary evaluation tasks: Classification, Joint Emotion + Intent, and Generation. Each dataset is associated with one of these tasks.
+
+### 🧪 Evaluation Usage
+
+#### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 1. Classification
-
-```bash
-python eval.py classification --json results.json --output classification.json
-```
-
-Format:
-```json
-[
-  {"video": "sample1.mp4", "expected_value": "positive", "predicted_value": "positive"},
-  {"video": "sample2.mp4", "expected_value": "neutral", "predicted_value": "negative"}
-]
-```
-
----
-
-### 2. Joint Emotion + Intent
-
-```bash
-python eval.py joint --json emotions.json --output joint.json
-```
-
-Format:
-```json
-[
+#### 1. Classification
+- **Task**: Classify videos into predefined emotional categories.
+- **Command**:
+  ```bash
+  python eval.py classification --json results.json --output classification.json
+  ```
+- **Input JSON (e.g. results.json) Format**:
+  ```json
+  [
+    {"video": "sample1.mp4", "expected_value": "positive", "predicted_value": "positive"},
+    {"video": "sample2.mp4", "expected_value": "neutral", "predicted_value": "negative"}
+  ]
+  ```
+- **Output Format**:
+  ```json
   {
-    "modal_path": "sample1.mp4",
-    "expected_emotion": "happy",
-    "predicted_emotion": "happy",
-    "expected_intent": "encouraging",
-    "predicted_intent": "encouraging"
+    "accuracy": 0.85,
+    "precision": 0.84,
+    "recall": 0.83,
+    "f1_score": 0.83
   }
-]
-```
-
+  ```
+- **Applicable Datasets**: All datasets except MC-EIU-test_500.json and smile_test_data.json.
 ---
 
-### 3. Generation
-
-```bash
-python eval.py generation --json gen.json --output generation.json
-```
-
-Format:
-```json
-[
-  {"video": "sample1.mp4", "prediction": "I am very happy", "reference": "I feel happy"}
-]
-```
-
+#### 2. Joint Emotion + Intent
+- **Task**: Simultaneously predict the emotion and intent conveyed in a video.
+- **Command**:
+  ```bash
+  python eval.py joint --json emotions.json --output joint.json
+  ```
+- **Input JSON (e.g. emotions.json) Format**:
+  ```json
+  [
+    {
+      "modal_path": "sample1.mp4",
+      "expected_emotion": "happy",
+      "predicted_emotion": "happy",
+      "expected_intent": "encouraging",
+      "predicted_intent": "encouraging"
+    }
+  ]
+  ```
+- **Output Format**:
+  ```json
+  {
+    "joint_accuracy": 0.80,
+    "joint_precision": 0.79,
+    "joint_recall": 0.78,
+    "joint_f1": 0.78,
+    "total": 100
+  }
+  ```
+- **Applicable Dataset**: MC-EIU-test_500.json.
 ---
 
-### 4. Run All in One
+#### 3. Generation
+- **Task**: Generate a textual description of the video's content.
+- **Command**:
+  ```bash
+  python eval.py generation --json gen.json --output generation.json
+  ```
+- **Input JSON (e.g. gen.json) Format**:
+  ```json
+  [
+    {"video": "sample1.mp4", "prediction": "I am very happy", "reference": "I feel happy"}
+  ]
+  ```
+- **Output Format**:
+  ```json
+  {
+    "avg_bleu": 0.35,
+    "avg_rouge": 0.42,
+    "avg_bert": 0.75,
+    "total": 100
+  }
+  ```
+- **Applicable Dataset**: smile_test_data.json.
+---
+
+#### 4. Run All in One
 
 ```bash
 python eval.py all \
@@ -135,14 +227,6 @@ Output:
 - `results/generation.json`
 
 ---
-
-## 📁 Provided Files
-
-- `eval.py` — evaluation script (supports all modes)
-- `requirements.txt` — required Python packages
-- `results.json` — classification sample
-- `emotions.json` — joint sample
-- `gen.json` — generation sample
 
 
 ## 📜 Citation
