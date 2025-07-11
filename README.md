@@ -211,20 +211,27 @@ pip install -r requirements.txt
 - **Applicable Dataset**: smile_test_data.json.
 ---
 
-#### 4. Run All in One
+### Important Notes for Researchers and Developers
+- **Input JSON Preparation**:
+  
+  Researchers and developers need to write scripts tailored to their trained or tested models to generate the aforementioned input JSON files (results.json, emotions.json, gen.json). This ensures that eval.py can correctly load and evaluate the data.
 
-```bash
-python eval.py all \
-  --classification-json results.json \
-  --joint-json emotions.json \
-  --generation-json gen.json \
-  --output-dir results/
-```
+- **Evaluation Output**:
+  
+  Evaluation results will be saved in the specified output JSON files, facilitating further analysis and comparison of different model performances.
 
-Output:
-- `results/classification.json`
-- `results/joint.json`
-- `results/generation.json`
+- **All-in-One Evaluation**:
+  
+  You can also use the all mode to run all three evaluations simultaneously. For example:
+  ```bash
+  python eval.py all \
+    --classification-json results.json \
+    --joint-json emotions.json \
+    --generation-json gen.json \
+    --output-dir results/
+  ```
+  This will generate three files: results/classification.json, results/joint.json, and results/generation.json, corresponding to the evaluation metrics of each task.
+
 
 ---
 
