@@ -1,0 +1,16 @@
+[
+  {
+    "modal_path": "sample1.mp4",
+    "expected_emotion": "happy",
+    "predicted_emotion": "happy",
+    "expected_intent": "encouraging",
+    "predicted_intent": "encouraging"
+  },
+  {
+    "modal_path": "sample2.mp4",
+    "expected_emotion": "sad",
+    "predicted_emotion": "neutral",
+    "expected_intent": "questioning",
+    "predicted_intent": "acknowledging"
+  }
+]
