@@ -15,6 +15,7 @@
 <p align="center">
     <a href="#-about">🌸 About</a> •
     <a href="#-news">📰 News</a> •
+    <a href="#-dataset">📦 Dataset</a> •
     <a href="#-quick-start">🔥 Quick Start</a> •
     <a href="#-citation">📜 Citation</a>
 </p>
@@ -33,7 +34,7 @@ This repository contains the official evaluation code and data for the paper "**
 
 
 
-## 📥 Dataset
+## 📦 Dataset
 To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
 
 <a href="https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view"><img src="https://img.shields.io/badge/Dataset-Open-green.svg" alt="Dataset Open"/></a>
