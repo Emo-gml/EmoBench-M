@@ -33,6 +33,42 @@ This repository contains the official evaluation code and data for the paper "**
 - **[2025-02-05]** Created the official project website: https://emo-gml.github.io/.
 
 
+## 🏆 Leaderboard
+| Method                   | FER   | CEU   | SCEA  | Avg.  |
+|--------------------------|-------|-------|-------|-------|
+| **🏅Human**                | **62.0** | **84.4** | **72.7** | **73.0** |
+
+### Closed-Source Model (API)
+
+| Method                   | FER   | CEU   | SCEA  | Avg.  |
+|--------------------------|-------|-------|-------|-------|
+| 🥈Gemini-2.0-Flash         | **61.4** | 53.4  | **72.0** | **62.3** |
+| 🥉Gemini-1.5-Flash         | **59.7** | **55.6** | 68.6  | **61.3** |
+| Gemini-2.0-Flash-Thinking| 57.7  | **54.2** | 70.0  | 60.6  |
+| Qwen2.5-VL-78B-Instruct  | 53.0  | 47.9  | **72.5** | 57.8  |
+| GLM-4V-PLUS              | 56.1  | 47.3  | 69.6  | 57.7  |
+
+### Open-Source Model
+
+| Method                   | FER   | CEU   | SCEA  | Avg.  |
+|--------------------------|-------|-------|-------|-------|
+| InternVL2.5-38B          | 57.6  | 48.9  | 56.6  | 54.4  |
+| Qwen2-Audio-7B-Instruct  | 59.9  | 43.3  | 55.7  | 53.0  |
+| InternVL2.5-78B          | 53.0  | 44.5  | 59.8  | 52.4  |
+| Video-LLaMA2.1-7B-16F    | 50.9  | 46.1  | 57.5  | 51.5  |
+| InternVideo2-Chat-8B     | 50.6  | 40.2  | 63.6  | 51.5  |
+| Video-LLaMA2-7B-16F      | 51.4  | 37.1  | 64.5  | 51.0  |
+| InternVL2.5-4B           | 54.5  | 49.3  | 49.0  | 50.9  |
+| InternVL2.5-8B           | 51.2  | 45.7  | 54.2  | 50.4  |
+| Video-LLaMA2.1-7B-AV     | 50.4  | 46.1  | 49.5  | 48.7  |
+| Video-LLaMA2-72B         | 50.7  | 37.3  | 61.8  | 49.9  |
+| Video-LLaMA2-7B          | 45.4  | 34.5  | 61.3  | 47.1  |
+| MiniCPM-V-2.6-8B         | 40.0  | 43.1  | 56.5  | 46.5  |
+| LongVA-DPO-7B            | 45.7  | 32.1  | 53.5  | 43.8  |
+| Emotion-LLaMA            | 36.9  | 30.7  | 54.1  | 40.6  |
+| 👀 Random                   | **23.1** | **19.8** | **33.3** | **25.4** |
+
+
 
 ## 📦 Dataset
 To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
