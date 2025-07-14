@@ -36,10 +36,10 @@ This repository contains the official evaluation code and data for the paper "**
 
 | Method                             |   FER   |   CEU   |  SCEA   |  Avg.   |
 |------------------------------------|---------|---------|---------|---------|
-| 🏅**Human**                         | 62.0 | 84.4 | 72.7 | 73.0 |
-| 🥈Gemini-2.0-Flash                 | **61.4** |  53.4   | 72.0 | **62.3** |
-| 🥉Gemini-1.5-Flash                 |  59.7   | **55.6** |  68.6   |  61.3   |
-| Gemini-2.0-Flash-Thinking          |  57.7   |  54.2   |  70.0   |  60.6   |
+| **Human**                         | 62.0 | 84.4 | 72.7 | 73.0 |
+| 🏅Gemini-2.0-Flash                 | **61.4** |  53.4   | 72.0 | **62.3** |
+| 🥈Gemini-1.5-Flash                 |  59.7   | **55.6** |  68.6   |  61.3   |
+|🥉Gemini-2.0-Flash-Thinking          |  57.7   |  54.2   |  70.0   |  60.6   |
 | Qwen2.5-VL-78B-Instruct            |  53.0   |  47.9   | **72.5** |  57.8   |
 | GLM-4V-PLUS                        |  56.1   |  47.3   |  69.6   |  57.7   |
 | InternVL2.5-38B                    |  57.6   |  48.9   |  56.6   |  54.4   |
