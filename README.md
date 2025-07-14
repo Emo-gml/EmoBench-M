@@ -34,40 +34,30 @@ This repository contains the official evaluation code and data for the paper "**
 
 ## 🏆 Leaderboard
 
-<table style="width:100%; table-layout: fixed; text-align: center;">
-  <thead>
-    <tr>
-      <th>Method</th>
-      <th>FER</th>
-      <th>CEU</th>
-      <th>SCEA</th>
-      <th>Avg.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>🏅<b>Human</b></td><td><b>62.0</b></td><td><b>84.4</b></td><td><b>72.7</b></td><td><b>73.0</b></td></tr>
-    <tr><td>🥈Gemini-2.0-Flash</td><td><b>61.4</b></td><td>53.4</td><td><b>72.0</b></td><td><b>62.3</b></td></tr>
-    <tr><td>🥉Gemini-1.5-Flash</td><td>59.7</td><td><b>55.6</b></td><td>68.6</td><td>61.3</td></tr>
-    <tr><td>Gemini-2.0-Flash-Thinking</td><td>57.7</td><td>54.2</td><td>70.0</td><td>60.6</td></tr>
-    <tr><td>Qwen2.5-VL-78B-Instruct</td><td>53.0</td><td>47.9</td><td><b>72.5</b></td><td>57.8</td></tr>
-    <tr><td>GLM-4V-PLUS</td><td>56.1</td><td>47.3</td><td>69.6</td><td>57.7</td></tr>
-    <tr><td>InternVL2.5-38B</td><td>57.6</td><td>48.9</td><td>56.6</td><td>54.4</td></tr>
-    <tr><td>Qwen2-Audio-7B-Instruct</td><td>59.9</td><td>43.3</td><td>55.7</td><td>53.0</td></tr>
-    <tr><td>InternVL2.5-78B</td><td>53.0</td><td>44.5</td><td>59.8</td><td>52.4</td></tr>
-    <tr><td>Video-LLaMA2.1-7B-16F</td><td>50.9</td><td>46.1</td><td>57.5</td><td>51.5</td></tr>
-    <tr><td>InternVideo2-Chat-8B</td><td>50.6</td><td>40.2</td><td>63.6</td><td>51.5</td></tr>
-    <tr><td>Video-LLaMA2-7B-16F</td><td>51.4</td><td>37.1</td><td>64.5</td><td>51.0</td></tr>
-    <tr><td>InternVL2.5-4B</td><td>54.5</td><td>49.3</td><td>49.0</td><td>50.9</td></tr>
-    <tr><td>InternVL2.5-8B</td><td>51.2</td><td>45.7</td><td>54.2</td><td>50.4</td></tr>
-    <tr><td>Video-LLaMA2.1-7B-AV</td><td>50.4</td><td>46.1</td><td>49.5</td><td>48.7</td></tr>
-    <tr><td>Video-LLaMA2-72B</td><td>50.7</td><td>37.3</td><td>61.8</td><td>49.9</td></tr>
-    <tr><td>Video-LLaMA2-7B</td><td>45.4</td><td>34.5</td><td>61.3</td><td>47.1</td></tr>
-    <tr><td>MiniCPM-V-2.6-8B</td><td>40.0</td><td>43.1</td><td>56.5</td><td>46.5</td></tr>
-    <tr><td>LongVA-DPO-7B</td><td>45.7</td><td>32.1</td><td>53.5</td><td>43.8</td></tr>
-    <tr><td>Emotion-LLaMA</td><td>36.9</td><td>30.7</td><td>54.1</td><td>40.6</td></tr>
-    <tr><td>👀 Random</td><td>23.1</td><td>19.8</td><td>33.3</td><td>25.4</td></tr>
-  </tbody>
-</table>
+| Method                             |   FER   |   CEU   |  SCEA   |  Avg.   |
+|------------------------------------|---------|---------|---------|---------|
+| 🏅**Human**                         | **62.0** | **84.4** | **72.7** | **73.0** |
+| 🥈Gemini-2.0-Flash                 | **61.4** |  53.4   | **72.0** | **62.3** |
+| 🥉Gemini-1.5-Flash                 |  59.7   | **55.6** |  68.6   |  61.3   |
+| Gemini-2.0-Flash-Thinking          |  57.7   |  54.2   |  70.0   |  60.6   |
+| Qwen2.5-VL-78B-Instruct            |  53.0   |  47.9   | **72.5** |  57.8   |
+| GLM-4V-PLUS                        |  56.1   |  47.3   |  69.6   |  57.7   |
+| InternVL2.5-38B                    |  57.6   |  48.9   |  56.6   |  54.4   |
+| Qwen2-Audio-7B-Instruct            |  59.9   |  43.3   |  55.7   |  53.0   |
+| InternVL2.5-78B                    |  53.0   |  44.5   |  59.8   |  52.4   |
+| Video-LLaMA2.1-7B-16F              |  50.9   |  46.1   |  57.5   |  51.5   |
+| InternVideo2-Chat-8B              |  50.6   |  40.2   |  63.6   |  51.5   |
+| Video-LLaMA2-7B-16F                |  51.4   |  37.1   |  64.5   |  51.0   |
+| InternVL2.5-4B                     |  54.5   |  49.3   |  49.0   |  50.9   |
+| InternVL2.5-8B                     |  51.2   |  45.7   |  54.2   |  50.4   |
+| Video-LLaMA2.1-7B-AV               |  50.4   |  46.1   |  49.5   |  48.7   |
+| Video-LLaMA2-72B                   |  50.7   |  37.3   |  61.8   |  49.9   |
+| Video-LLaMA2-7B                    |  45.4   |  34.5   |  61.3   |  47.1   |
+| MiniCPM-V-2.6-8B                   |  40.0   |  43.1   |  56.5   |  46.5   |
+| LongVA-DPO-7B                      |  45.7   |  32.1   |  53.5   |  43.8   |
+| Emotion-LLaMA                      |  36.9   |  30.7   |  54.1   |  40.6   |
+| 👀 Random                          |  23.1   |  19.8   |  33.3   |  25.4   |
+
 
 
 
