@@ -7,7 +7,7 @@
 <p align="center">
     <a href="https://emo-gml.github.io/"><img src="https://img.shields.io/badge/%F0%9F%8F%86-website-8A2BE2"></a>
     <a href="https://arxiv.org/abs/2502.04424"><img src="https://img.shields.io/badge/arXiv-2502.04424-b31b1b.svg"></a>
-    <a href="https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view"><img src="https://img.shields.io/badge/Dataset-Google%20Drive-green.svg" alt="Dataset Google Drive"/></a>
+    <a href="https://drive.google.com/file/d/1ohQWGJOuJVN3-uOeEifA3C0tMaadYe_K/view?usp=sharing"><img src="https://img.shields.io/badge/Dataset-Google%20Drive-green.svg" alt="Dataset Google Drive"/></a>
     <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"/> </a>
 
 </p>
@@ -64,7 +64,7 @@ This repository contains the official evaluation code and data for the paper "**
 ## 📦 Dataset
 To use this benchmark, **please first download the original video files and corresponding annotation `.json` files** from the link below:
 
-<a href="https://drive.google.com/file/d/16MAChQR2ASjL_gk24bGVnBxlV3ukoVoh/view"><img src="https://img.shields.io/badge/Dataset-Google%20Drive-green.svg" alt="Dataset Google Drive"/></a>
+<a href="https://drive.google.com/file/d/1ohQWGJOuJVN3-uOeEifA3C0tMaadYe_K/view?usp=sharing"><img src="https://img.shields.io/badge/Dataset-Google%20Drive-green.svg" alt="Dataset Google Drive"/></a>
 
 Each JSON file contains conversation-style prompts and labels aligned with the corresponding video clips. The structure looks like:
 
