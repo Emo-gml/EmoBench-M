@@ -103,44 +103,44 @@ Each JSON file contains conversation-style prompts and labels aligned with the c
   │   ├── funny.json    # Test instructions for the UR-FUNNY dataset
   │   ├── mer2023.json # Test instructions for the MER2023 dataset
   │   └── smile.json           # Test data for the SMILE dataset
-  └── dataset_500/              # Corresponding video files for each dataset
-      ├── FGMSA_test_instruction/
+  └── dataset/              # Corresponding video files for each dataset
+      ├── FGMSA/
       │   └── videos/
       │       └── FGMSA/        # Video files for the FGMSA dataset
-      ├── MC-EIU-test_500/
+      ├── MC-EIU/
       │   └── videos/
       │       └── MC-EIU/       # Video files for the MC-EIU dataset
-      ├── MELD_test_instruction/
+      ├── MELD/
       │   └── videos/
       │       └── MELD/         # Video files for the MELD dataset
-      ├── MOSEI_test_500/
+      ├── MOSEI/
       │   └── videos/
       │       └── MOSEI/        # Video files for the MOSEI dataset
-      ├── MOSI_test_500/
+      ├── MOSI/
       │   └── videos/
       │       └── MOSI/         # Video files for the MOSI dataset
-      ├── MUSTARD_500/
+      ├── MUSTARD/
       │   └── videos/
       │       └── MUSTARD/      # Video files for the MUSTARD dataset
-      ├── RAVDSS_song_500/
+      ├── RAVDSS_song/
       │   └── videos/
       │       └── RAVDSS/       # Video files for the RAVDSS song subset
-      ├── RAVDSS_speech_500/
+      ├── RAVDSS_speech/
       │   └── videos/
       │       └── RAVDSS/       # Video files for the RAVDSS speech subset
-      ├── SIMS_test_500/
+      ├── SIMS_test/
       │   └── videos/
       │       └── SIMS/         # Video files for the SIMS dataset
-      ├── ch-simsv2s_test_500/
+      ├── ch-simsv2s/
       │   └── videos/
       │       └── ch-simsv2s/   # Video files for the Chinese SIMS v2s dataset
-      ├── funny_test_instruction/
+      ├── funny/
       │   └── videos/
       │       └── UR-FUNNY/     # Video files for the UR-FUNNY dataset
-      ├── mer2023_test1_instruction/
+      ├── mer2023/
       │   └── videos/
       │       └── MER2023/      # Video files for the MER2023 dataset
-      └── smile_test_data/
+      └── smile/
           └── videos/
               └── SMILE/       # Video files for the SMILE dataset
   ```
