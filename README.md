@@ -90,19 +90,19 @@ Each JSON file contains conversation-style prompts and labels aligned with the c
   ```bash
   EmoBench-M/
   ├── benchmark_json/           # JSON files containing metadata and annotations for each dataset
-  │   ├── FGMSA_test_instruction.json    # Test instructions for the FGMSA dataset
-  │   ├── MC-EIU-test_500.json           # 500-sample test set for the MC-EIU dataset
-  │   ├── MELD_test_instruction.json     # Test instructions for the MELD dataset
-  │   ├── MOSEI_test_500.json            # 500-sample test set for the MOSEI dataset
-  │   ├── MOSI_test_500.json             # 500-sample test set for the MOSI dataset
-  │   ├── MUSTARD_500.json               # 500-sample test set for the MUSTARD dataset
-  │   ├── RAVDSS_song_500.json           # 500-sample test set for the RAVDSS song subset
-  │   ├── RAVDSS_speech_500.json         # 500-sample test set for the RAVDSS speech subset
-  │   ├── SIMS_test_500.json             # 500-sample test set for the SIMS dataset
-  │   ├── ch-simsv2s_test_500.json       # 500-sample test set for the Chinese SIMS v2s dataset
-  │   ├── funny_test_instruction.json    # Test instructions for the UR-FUNNY dataset
-  │   ├── mer2023_test1_instruction.json # Test instructions for the MER2023 dataset
-  │   └── smile_test_data.json           # Test data for the SMILE dataset
+  │   ├── FGMSA.json    # Test instructions for the FGMSA dataset
+  │   ├── MC-EIU.json           # 500-sample test set for the MC-EIU dataset
+  │   ├── MELD.json     # Test instructions for the MELD dataset
+  │   ├── MOSEI.json            # 500-sample test set for the MOSEI dataset
+  │   ├── MOSI.json             # 500-sample test set for the MOSI dataset
+  │   ├── MUSTARD.json               # 500-sample test set for the MUSTARD dataset
+  │   ├── RAVDSS_song.json           # 500-sample test set for the RAVDSS song subset
+  │   ├── RAVDSS_speech.json         # 500-sample test set for the RAVDSS speech subset
+  │   ├── SIMS.json             # 500-sample test set for the SIMS dataset
+  │   ├── ch-simsv2s.json       # 500-sample test set for the Chinese SIMS v2s dataset
+  │   ├── funny.json    # Test instructions for the UR-FUNNY dataset
+  │   ├── mer2023.json # Test instructions for the MER2023 dataset
+  │   └── smile.json           # Test data for the SMILE dataset
   └── dataset_500/              # Corresponding video files for each dataset
       ├── FGMSA_test_instruction/
       │   └── videos/
