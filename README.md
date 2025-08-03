@@ -146,7 +146,7 @@ Each JSON file contains conversation-style prompts and labels aligned with the c
   ```
   📂 Dtat Structure Overview
   - benchmark_json/: Contains JSON files with metadata and annotations for each dataset, including test instructions and sample information.
-  - dataset_500/: Corresponding video files for each dataset, organized into subdirectories named after each dataset.
+  - dataset/: Corresponding video files for each dataset, organized into subdirectories named after each dataset.
 
 ## 🔥 Quick Start
 EmoBench-M encompasses three primary evaluation tasks: Classification, Joint Emotion + Intent, and Generation. Each dataset is associated with one of these tasks.
@@ -181,7 +181,7 @@ pip install -r requirements.txt
     "f1_score": 0.83
   }
   ```
-- **Applicable Datasets**: All datasets except MC-EIU-test_500.json and smile_test_data.json.
+- **Applicable Datasets**: All datasets except MC-EIU.json and smile_test_data.json.
 ---
 
 #### 2. Joint Emotion + Intent
@@ -212,7 +212,7 @@ pip install -r requirements.txt
     "total": 100
   }
   ```
-- **Applicable Dataset**: MC-EIU-test_500.json.
+- **Applicable Dataset**: MC-EIU.json.
 ---
 
 #### 3. Generation
@@ -236,7 +236,7 @@ pip install -r requirements.txt
     "total": 100
   }
   ```
-- **Applicable Dataset**: smile_test_data.json.
+- **Applicable Dataset**: smile.json.
 ---
 
 ### Important Notes for Researchers and Developers
