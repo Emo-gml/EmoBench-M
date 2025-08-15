@@ -276,7 +276,7 @@ pip install -r requirements.txt
 - SMILE — https://github.com/postech-ami/SMILE-Dataset (Understanding Laughter in Video)
 - RAVDESS — https://zenodo.org/records/1188976 (Audio-Visual Emotional Speech & Song)
 - MC-EIU — https://github.com/MC-EIU/MC-EIU (Emotion & Intent Joint Understanding)
-- MER2023 — https://www.merchallenge.cn/datasets (Multimodal Emotion Recognition Challenge)
+- MER2023 — http://merchallenge.cn/datasets (Multimodal Emotion Recognition Challenge)
 - EMER / AffectGPT — https://github.com/zeroQiaoba/AffectGPT (Explainable Multimodal Emotion Reasoning)
 
 
