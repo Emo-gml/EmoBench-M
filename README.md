@@ -15,8 +15,10 @@
 <p align="center">
     <a href="#-about">🌸 About</a> •
     <a href="#-news">📰 News</a> •
+    <a href="#-leaderboard">🏆 Leaderboard</a> •
     <a href="#-dataset">📦 Dataset</a> •
     <a href="#-quick-start">🔥 Quick Start</a> •
+    <a href="#-friendly-links">🔗 Friendly Links</a> •
     <a href="#-citation">📜 Citation</a>
 </p>
 
@@ -263,7 +265,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔗 Friendly Datasets & Resources
+## 🔗 Friendly Links
 
 - MUStARD: https://github.com/Himanshu-sudo/MUStARD-dataset
 - MELD: https://github.com/declare-lab/MELD
