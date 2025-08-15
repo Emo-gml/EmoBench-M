@@ -263,6 +263,19 @@ pip install -r requirements.txt
 
 ---
 
+## 🔗 Friendly Datasets & Resources
+
+- MUStARD: https://github.com/Himanshu-sudo/MUStARD-dataset
+- MELD: https://github.com/declare-lab/MELD
+- CH-SIMS : https://github.com/thuiar/MMSA
+- CH-SIMS v2.0 : https://github.com/thuiar/ch-sims-v2
+- UR-FUNNY: https://github.com/ROC-HCI/UR-FUNNY
+- FMSA-SC: https://github.com/sunlitsong/FMSA-SC-dataset
+- SMILE: https://github.com/postech-ami/SMILE-Dataset
+- RAVDESS: https://zenodo.org/records/1188976
+- Emotion & Intent Joint Understanding (MEIJU, ICASSP 2025): https://github.com/MC-EIU/MC-EIU
+- MER2023 (Multi-label, Robustness, Semi-Supervised): http://merchallenge.cn/datasets
+- EMER / AffectGPT: https://github.com/zeroQiaoba/AffectGPT
 
 ## 📜 Citation
 ```bibtex
