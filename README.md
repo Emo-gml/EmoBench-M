@@ -267,17 +267,18 @@ pip install -r requirements.txt
 
 ## 🔗 Friendly Links
 
-- MUStARD: https://github.com/Himanshu-sudo/MUStARD-dataset
-- MELD: https://github.com/declare-lab/MELD
-- CH-SIMS : https://github.com/thuiar/MMSA
-- CH-SIMS v2.0 : https://github.com/thuiar/ch-sims-v2
-- UR-FUNNY: https://github.com/ROC-HCI/UR-FUNNY
-- FMSA-SC: https://github.com/sunlitsong/FMSA-SC-dataset
-- SMILE: https://github.com/postech-ami/SMILE-Dataset
-- RAVDESS: https://zenodo.org/records/1188976
-- Emotion & Intent Joint Understanding (MEIJU, ICASSP 2025): https://github.com/MC-EIU/MC-EIU
-- MER2023 (Multi-label, Robustness, Semi-Supervised): http://merchallenge.cn/datasets
-- EMER / AffectGPT: https://github.com/zeroQiaoba/AffectGPT
+- MUStARD — https://github.com/Himanshu-sudo/MUStARD-dataset (Multimodal Sarcasm Detection Dataset)
+- MELD — https://github.com/declare-lab/MELD (Multimodal EmotionLines Dataset)
+- CH-SIMS — https://github.com/thuiar/MMSA (Chinese Multimodal Sentiment Analysis)
+- CH-SIMS v2.0 — https://github.com/thuiar/ch-sims-v2 (Enhanced CH-SIMS + AV-Mixup)
+- UR-FUNNY — https://github.com/ROC-HCI/UR-FUNNY (Multimodal Humor Understanding)
+- FMSA-SC — https://github.com/sunlitsong/FMSA-SC-dataset (Fine-grained Stock Comment Videos)
+- SMILE — https://github.com/postech-ami/SMILE-Dataset (Understanding Laughter in Video)
+- RAVDESS — https://zenodo.org/records/1188976 (Audio-Visual Emotional Speech & Song)
+- MC-EIU — https://github.com/MC-EIU/MC-EIU (Emotion & Intent Joint Understanding)
+- MER2023 — https://www.merchallenge.cn/datasets (Multimodal Emotion Recognition Challenge)
+- EMER / AffectGPT — https://github.com/zeroQiaoba/AffectGPT (Explainable Multimodal Emotion Reasoning)
+
 
 ## 📜 Citation
 ```bibtex
