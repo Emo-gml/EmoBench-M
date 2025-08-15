@@ -267,7 +267,7 @@ pip install -r requirements.txt
 
 ## 🔗 Friendly Links
 
-- MUStARD — https://github.com/Himanshu-sudo/MUStARD-dataset (Multimodal Sarcasm Detection Dataset)
+- MUStARD — https://github.com/soujanyaporia/MUStARD (Multimodal Sarcasm Detection Dataset)
 - MELD — https://github.com/declare-lab/MELD (Multimodal EmotionLines Dataset)
 - CH-SIMS — https://github.com/thuiar/MMSA (Chinese Multimodal Sentiment Analysis)
 - CH-SIMS v2.0 — https://github.com/thuiar/ch-sims-v2 (Enhanced CH-SIMS + AV-Mixup)
