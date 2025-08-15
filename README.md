@@ -76,7 +76,7 @@ Each JSON file contains conversation-style prompts and labels aligned with the c
       "conversations": [
         {
           "from": "human",
-          "value": "<video>\nThe person in video says: ... Determine the emotion conveyed..."
+          "value": "<video>\nThe person in the video says: ... Determine the emotion conveyed..."
         },
         {
           "from": "gpt",
