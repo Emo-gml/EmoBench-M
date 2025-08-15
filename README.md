@@ -278,7 +278,7 @@ pip install -r requirements.txt
 - MC-EIU — https://github.com/MC-EIU/MC-EIU (Emotion & Intent Joint Understanding)
 - MER2023 — http://merchallenge.cn/datasets (Multimodal Emotion Recognition Challenge)
 - EMER / AffectGPT — https://github.com/zeroQiaoba/AffectGPT (Explainable Multimodal Emotion Reasoning)
-
+- Emotion-LLaMA - https://github.com/ZebangCheng/Emotion-LLaMA （Multimodal Emotion Recognition and Reasoning）
 
 ## 📜 Citation
 ```bibtex
