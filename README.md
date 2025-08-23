@@ -291,3 +291,105 @@ pip install -r requirements.txt
 ```
 🔥Please contact huhe@gml.ac.cn
  if you wish to contribute to the leaderboard or encounter any issues.
+
+ ## 📖 Citation
+
+If you use the **EmoBench-M** or find any of the following datasets helpful for your research, please consider citing the corresponding papers:
+
+```bibtex
+@article{livingstone2018ryerson,
+  title={The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English},
+  author={Livingstone, Steven R and Russo, Frank A},
+  journal={PloS one},
+  volume={13},
+  number={5},
+  pages={e0196391},
+  year={2018},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+
+@article{zadeh2016mosi,
+  title={Mosi: multimodal corpus of sentiment intensity and subjectivity analysis in online opinion videos},
+  author={Zadeh, Amir and Zellers, Rowan and Pincus, Eli and Morency, Louis-Philippe},
+  journal={arXiv preprint arXiv:1606.06259},
+  year={2016}
+}
+
+@inproceedings{zadeh2018multimodal,
+  title={Multimodal language analysis in the wild: Cmu-mosei dataset and interpretable dynamic fusion graph},
+  author={Zadeh, AmirAli Bagher and Liang, Paul Pu and Poria, Soujanya and Cambria, Erik and Morency, Louis-Philippe},
+  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={2236--2246},
+  year={2018}
+}
+
+@article{song2024fmsa,
+  title={FMSA-SC: A fine-grained multimodal sentiment analysis dataset based on stock comment videos},
+  author={Song, Lingyun and Chen, Siyu and Meng, Ziyang and Sun, Mingxuan and Shang, Xuequn},
+  journal={IEEE Transactions on Multimedia},
+  volume={26},
+  pages={7294--7306},
+  year={2024},
+  publisher={IEEE}
+}
+
+@inproceedings{lian2023mer,
+  title={Mer 2023: Multi-label learning, modality robustness, and semi-supervised learning},
+  author={Lian, Zheng and Sun, Haiyang and Sun, Licai and Chen, Kang and Xu, Mngyu and Wang, Kexin and Xu, Ke and He, Yu and Li, Ying and Zhao, Jinming and others},
+  booktitle={Proceedings of the 31st ACM international conference on multimedia},
+  pages={9610--9614},
+  year={2023}
+}
+
+@inproceedings{liu2022make,
+  title={Make acoustic and visual cues matter: Ch-sims v2. 0 dataset and av-mixup consistent module},
+  author={Liu, Yihe and Yuan, Ziqi and Mao, Huisheng and Liang, Zhiyun and Yang, Wanqiuyue and Qiu, Yuanzhe and Cheng, Tie and Li, Xiaoteng and Xu, Hua and Gao, Kai},
+  booktitle={Proceedings of the 2022 international conference on multimodal interaction},
+  pages={247--258},
+  year={2022}
+}
+
+@inproceedings{yu2020ch,
+  title={Ch-sims: A chinese multimodal sentiment analysis dataset with fine-grained annotation of modality},
+  author={Yu, Wenmeng and Xu, Hua and Meng, Fanyang and Zhu, Yilin and Ma, Yixiao and Wu, Jiele and Zou, Jiyun and Yang, Kaicheng},
+  booktitle={Proceedings of the 58th annual meeting of the association for computational linguistics},
+  pages={3718--3727},
+  year={2020}
+}
+
+@article{liu2024emotion,
+  title={Emotion and intent joint understanding in multimodal conversation: A benchmarking dataset},
+  author={Liu, Rui and Zuo, Haolin and Lian, Zheng and Xing, Xiaofen and Schuller, Bj{\"o}rn W and Li, Haizhou},
+  journal={arXiv preprint arXiv:2407.02751},
+  year={2024}
+}
+
+@article{poria2018meld,
+  title={Meld: A multimodal multi-party dataset for emotion recognition in conversations},
+  author={Poria, Soujanya and Hazarika, Devamanyu and Majumder, Navonil and Naik, Gautam and Cambria, Erik and Mihalcea, Rada},
+  journal={arXiv preprint arXiv:1810.02508},
+  year={2018}
+}
+
+@article{castro2019towards,
+  title={Towards multimodal sarcasm detection (an \_obviously\_ perfect paper)},
+  author={Castro, Santiago and Hazarika, Devamanyu and P{\'e}rez-Rosas, Ver{\'o}nica and Zimmermann, Roger and Mihalcea, Rada and Poria, Soujanya},
+  journal={arXiv preprint arXiv:1906.01815},
+  year={2019}
+}
+
+@article{hasan2019ur,
+  title={UR-FUNNY: A multimodal language dataset for understanding humor},
+  author={Hasan, Md Kamrul and Rahman, Wasifur and Zadeh, Amir and Zhong, Jianyuan and Tanveer, Md Iftekhar and Morency, Louis-Philippe and others},
+  journal={arXiv preprint arXiv:1904.06618},
+  year={2019}
+}
+
+@article{hyun2023smile,
+  title={Smile: Multimodal dataset for understanding laughter in video with language models},
+  author={Hyun, Lee and Sung-Bin, Kim and Han, Seungju and Yu, Youngjae and Oh, Tae-Hyun},
+  journal={arXiv preprint arXiv:2312.09818},
+  year={2023}
+}
+
+
