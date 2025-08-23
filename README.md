@@ -289,3 +289,5 @@ pip install -r requirements.txt
   year={2025}
   }
 ```
+🔥Please contact huhe@gml.ac.cn
+ if you wish to contribute to the leaderboard or encounter any issues.
