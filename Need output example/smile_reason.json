@@ -1,1 +1,16 @@
-
+{
+  "task_name": "EmoBench-M Reasoning Why Audience Laughed Example",
+  "instruction": "Reasoning task: You are to answer why the audience laughed given the video clip. The video clip from BBT with multimodal information (Utterance, Facial Action Units, Video caption, Acoustic features (6 dimension; 1.mean of F0 contour, 2.var of F0 contour, 3.mean of energy contour, 4.var of energy contour, 5.jitter, 6.shimmer)) is given. The audience laughing moment is marked as (audience laughing) in certain utterance. Explain why audience laughed given the conversation, at most 40 words, starting with 'The audience laughed because '. Given video clip: {0: {Speaker: SHELDON, Utterance: Or maybe she just doesn't want to talk., Facial Action Units: ['Upper lid raiser' 'Lip tightener' 'Inner brow raiser'], Video caption: a man reading a book in a living room to a boy., Acoustic features: [175.06103515625, 16.203506469726562, -7.938157482425104, 2.535754177383794, 3.4869837878631342, 2.38929840716986]}, 1: {Speaker: RAJ, Utterance: Look, I found an iPod!, Facial Action Units: null, Video caption: a man playing a game on a laptop in a living room with a young boy sitting at a laptop., Acoustic features: [260.7344055175781, 37.433197021484375, -7.8592194902721175, 3.7988926498476188, 3.568138631778881, 5.589470770607397]}, 2: {Speaker: HOWARD, Utterance: It's smashed beyond repair. What are you gonna do with it?, Facial Action Units: null, Video caption: a young man in a red sweater sitting at a desk working on a laptop computer., Acoustic features: [182.1002197265625, 46.648902893066406, -6.748929381014222, 2.144028502669288, 3.8873456858156406, 4.859788861576135]}, 3: {Speaker: RAJ, Utterance: What else? Sell it on eBay as \\slightly used.\\ (audience laughs), Facial Action Units: null, Video caption: a man wearing a purple cardigan and a blue jacket stands in a room with a quote from the movie., Acoustic features: [170.09506225585938, 31.99806785583496, -6.462999706326954, 2.3742436276984296, 5.031697127805746, 6.365727321661537]}}",
+  "examples": [
+    {
+      "video": "a.mp4",
+      "prediction": "The audience laughed because Raj made a witty joke about selling a broken iPod as 'slightly used', showing ironic humor.",
+      "reference": "The audience laughed because Raj sarcastically pretended a smashed iPod could be sold as slightly used, which is absurdly funny."
+    },
+    {
+      "video": "b.mp4",
+      "prediction": "The audience laughed because the character made a deadpan remark contrasting logic with emotional misunderstanding.",
+      "reference": "The audience laughed because the humor came from an awkward literal interpretation of social behavior typical of Sheldon."
+    }
+  ]
+}
