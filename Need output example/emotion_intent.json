@@ -1,1 +1,23 @@
 
+{
+  "task_name": "EmoBench-M Emotion and Intent Recognition Example",
+  "task_description": "This JSON file provides an example for the emotion and intent recognition task supported by EmoBench-M. The goal is to analyze both the emotional tone and communicative intent expressed in the given spoken text from video data.",
+  "instruction": "The person in video says: -Hey. -Thanks for letting me come over. Analyze the emotion and intent. Choose one emotion: happy, surprise, sad, disgust, anger, fear, and neutral. Choose one intent: questioning, agreeing, acknowledging, encouraging, consoling, suggesting, wishing, and neutral. Respond in the format: {'emotion label': 'label', 'intent label': 'label'}.",
+  "examples": [
+    {
+      "modal_path": "/p/a.mp4",
+      "expected_emotion": "happy",
+      "expected_intent": "encouraging",
+      "predicted_emotion": "happy",
+      "predicted_intent": "encouraging"
+    },
+    {
+      "modal_path": "/p/b.mp4",
+      "expected_emotion": "sad",
+      "expected_intent": "questioning",
+      "predicted_emotion": "sad",
+      "predicted_intent": "neutral"
+    }
+  ],
+  "note": "This example illustrates how to represent multimodal emotion and intent recognition tasks in EmoBench-M format. The examples demonstrate both correct and partial model predictions. All text, instructions, and labels are preserved from the original context for clarity and reproducibility."
+}
