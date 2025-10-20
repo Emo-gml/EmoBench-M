@@ -1,4 +1,18 @@
-# [
-# {"video":"a.mp4","expected_value":"positive","predicted_value":"neutral"},
-# {"video":"b.mp4","expected_value":"negative","predicted_value":"negative"}
-# ]
+{
+  "task_name": "EmoBench-M Emotion Classification Example",
+  "task_description": "This JSON file demonstrates an example for the emotion classification task supported by EmoBench-M. The task evaluates a model's ability to identify the emotional tone conveyed in a piece of text extracted from a video. The model must classify the emotion as one of the following categories: neutral, negative, or positive.",
+  "instruction": "The person in video says: When you die, I'll burn paper to tell you. Goodbye, bastard. Determine the emotion conveyed. Do not provide any additional explanations or extra content. Choose one of the following labels as your final answer: neutral, negative, positive. Respond in the format: {'emotion': 'label'}.",
+  "examples": [
+    {
+      "video": "a.mp4",
+      "expected_value": "positive",
+      "predicted_value": "neutral"
+    },
+    {
+      "video": "b.mp4",
+      "expected_value": "negative",
+      "predicted_value": "negative"
+    }
+  ],
+  "note": "This is an example file showing the structure and format for emotion classification tasks in EmoBench-M. It includes sample entries demonstrating expected and predicted labels. The original text, instructions, and results are preserved as in the source example."
+}
