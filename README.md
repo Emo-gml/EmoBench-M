@@ -23,16 +23,17 @@
 </p>
 
 ## 🌸 About
-This repository contains the official evaluation code and data for the paper "**EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models**". See more details in our [paper](https://arxiv.org/abs/2502.04424v2). If you find this project helpful, feel free to ⭐ it!
+This repository contains the official evaluation code and data for the paper "**EmoBench-M: Benchmarking Emotional Intelligence for Multimodal Large Language Models**". See more details in our [paper](https://arxiv.org/pdf/2502.04424). If you find this project helpful, feel free to ⭐ it!
 
 > Can Multimodal Large Language Models (MLLMs) understand human emotions in dynamic, multimodal settings? To address this question, we introduce <b>EmoBench-M</b>, a comprehensive benchmark grounded in psychological theories of Emotional Intelligence (EI), designed to evaluate the EI capabilities of MLLMs across video, audio, and text. <b>EmoBench-M</b> spans 13 diverse scenarios across three key dimensions of EI: Foundational Emotion Recognition, Conversational Emotion Understanding, and Socially Complex Emotion Analysis. It includes over 5000 carefully curated samples and both classification and generation tasks, covering a wide range of real-world affective contexts. Through extensive evaluations of state-of-the-art MLLMs—including open-source models like Qwen2.5-VL and InternVL2.5, and proprietary models such as Gemini 2.0 Flash—we find that (i) current MLLMs significantly lag behind human performance, especially in conversational and socially complex tasks; (ii) model size alone does not guarantee better emotional reasoning; and (iii) nuanced social emotions and intent understanding remain particularly challenging. We hope EmoBench-M provides a solid foundation for future research toward emotionally intelligent AI systems.
 
 ![Alt text](intro_1.jpg)
 
 ## 📰 News
-- **[2025-07-08]** We open-sourced the code and dataset for EmoBench-M on GitHub!
-- **[2025-02-06]** Paper submitted to arXiv: https://arxiv.org/abs/2502.04424v2.
-- **[2025-02-05]** Created the official project website: https://emo-gml.github.io/.
+- **[2026-01-27]** The latest revision (v3) of our paper is available on arXiv.
+- **[2025-08-25]** We released the second version (v2) of the paper on arXiv with substantial updates.
+- **[2025-07-08]** We open-sourced the code and dataset for EmoBench-M on GitHub.
+- **[2025-02-06]** The first version (v1) of the paper was submitted to arXiv: https://arxiv.org/abs/2502.04424.
 
 ## 🏆 Leaderboard
 
