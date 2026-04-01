@@ -297,8 +297,6 @@ pip install -r requirements.txt
   year={2025}
   }
 ```
-🔥Please contact huhe@gml.ac.cn
- if you wish to contribute to the leaderboard or encounter any issues.
 
 If you use the **EmoBench-M** or find any of the following datasets helpful for your research, please consider citing the corresponding papers:
 
