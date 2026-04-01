@@ -1,6 +1,3 @@
-🔥Please contact huhe@gml.ac.cn
- if you wish to contribute to the leaderboard or encounter any issues.# EmoBench-M
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/Emo-gml/Emo-gml.github.io/master/emo.jpg" alt="project logo" width="200px" />
 </p>
@@ -297,10 +294,12 @@ pip install -r requirements.txt
   journal={arXiv preprint arXiv:2502.04424},
   year={2025}
   }
-```
-🔥Please contact huhe@gml.ac.cn
- if you wish to contribute to the leaderboard or encounter any issues.
- ```
+```md
+🔥 Please contact huhe@gml.ac.cn  
+if you wish to contribute to the leaderboard or encounter any issues.
+
+---
+
 If you use the **EmoBench-M** or find any of the following datasets helpful for your research, please consider citing the corresponding papers:
 
 ```bibtex
