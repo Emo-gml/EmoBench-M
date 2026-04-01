@@ -3,7 +3,6 @@
 </p>
 
 <p align="center">
-    <a href="https://arxiv.org/pdf/2502.04424"><img src="https://img.shields.io/badge/arXiv-2502.04424-b31b1b.svg"></a>
     <a href="https://drive.google.com/file/d/1ohQWGJOuJVN3-uOeEifA3C0tMaadYe_K/view?usp=sharing"><img src="https://img.shields.io/badge/Dataset-Google%20Drive-green.svg" alt="Dataset Google Drive"/></a>
     <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"/> </a>
 
