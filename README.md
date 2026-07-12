@@ -30,6 +30,7 @@ This repository contains the official evaluation code and data for the paper "**
 ![Alt text](intro_1.jpg)
 
 ## 📰 News
+- **[2026-01-27]** Our paper EmoBench-M has been accepted by MM 2026!
 - **[2026-01-27]** The latest revision (v3) of our paper is available on arXiv.
 - **[2025-08-25]** We released the second version (v2) of the paper on arXiv with substantial updates.
 - **[2025-07-08]** We open-sourced the code and dataset for EmoBench-M on GitHub.
